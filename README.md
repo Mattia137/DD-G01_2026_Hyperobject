@@ -25,16 +25,15 @@ It reads FBX exports, applies code-derived sizing rules (NYC Building / Mechanic
 Requires **Python 3** (no extra packages) and an internet connection (three.js and rhino3dm load from jsDelivr).
 
 ```bash
-python tools/serve.py            # opens http://localhost:8765
+python tools/serve.py            # opens http://localhost:8765/web/
 ```
 
-Or serve the `web/` folder with any static server, e.g. `python -m http.server -d web 8765`.
+Or serve the repo root with any static server (e.g. `python -m http.server 8765`) and open `/web/`. The **Doc** button in the viewer renders this README and the methodology.
 
 ### GitHub Pages
 
-The workflow in `.github/workflows/pages.yml` publishes `web/` on every push to `main`. Enable it once under **Settings → Pages → Source: GitHub Actions**.
-
-> If the workflow file is missing, copy `docs/github-pages-workflow.yml` to `.github/workflows/pages.yml`.
+Settings → Pages → **Deploy from a branch** → `main` / `(root)`. The root `index.html` redirects to the viewer in `web/` (the empty `.nojekyll` file disables Jekyll processing).
+Alternatively use **GitHub Actions** as source with `docs/github-pages-workflow.yml` copied to `.github/workflows/pages.yml`.
 
 ## Updating the model
 
