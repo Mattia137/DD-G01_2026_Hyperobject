@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.fbxbak
+*.3dmbak
+*.rhl
+build_log.txt
+.DS_Store
+Thumbs.db
